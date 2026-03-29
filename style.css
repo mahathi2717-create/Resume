@@ -1,3 +1,4 @@
+
 /* RESET */
 * {
     margin: 0;
@@ -5,32 +6,43 @@
     box-sizing: border-box;
 }
 
-/* BODY */
+/* BODY (element selector) */
 body {
-    font-family: Arial, sans-serif;
-    background: #f4f6f8;
+    background-color: #2e8bc0;
+    font-family: "Times New Roman", serif;
+    font-size: 14px;
+    color: #4b0082;
+    line-height: 1.6;
 }
 
-/* LAYOUT */
+/* LAYOUT (class selector) */
 .container {
     display: flex;
 }
 
-/* SIDEBAR */
+/* SIDEBAR (navigation bar using positioning) */
 .sidebar {
     width: 250px;
-    background: #2c3e50;
-    color: white;
+    background-color: #ff69b4;
+    color: rgb(244, 241, 241);
     height: 100vh;
     position: fixed;
+    top: 0;
+    left: 0;
     padding: 20px;
+    border-right: 5px solid #20b2aa;
 }
 
+/* SIDEBAR TITLE */
 .sidebar h2 {
+    font-family: Algerian, serif;
+    font-size: 18px;
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
+    color: rgb(229, 212, 30);
 }
 
+/* NAVIGATION */
 .sidebar ul {
     list-style: none;
 }
@@ -39,8 +51,9 @@ body {
     margin: 15px 0;
 }
 
+/* NAV LINKS */
 .sidebar a {
-    color: white;
+    color: rgb(207, 17, 96);
     text-decoration: none;
     padding: 10px;
     display: block;
@@ -50,74 +63,81 @@ body {
 
 /* HOVER EFFECT */
 .sidebar a:hover {
-    background: #34495e;
-}
-
-/* ICON SPACING */
-.sidebar i {
-    margin-right: 10px;
+    background-color: #20b2aa;
+    color: rgb(20, 18, 18);
+    transform: translateX(5px); /* slight movement */
 }
 
 /* MAIN CONTENT */
 .main {
     margin-left: 250px;
     width: 100%;
+    padding: 20px;
 }
 
 /* HEADER */
 header {
     text-align: center;
-    background: #2c3e50;
-    color: white;
-    padding: 30px;
+    background-color: #ce1571;
+    padding: 25px;
+    border-radius: 10px;
+    margin-bottom: 20px;
 }
 
+/* TITLE */
 header h1 {
-    margin: 0;
-}
-
-/* PROFILE IMAGE */
-.profile-pic {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    margin-top: 15px;
-    border: 3px solid white;
-    object-fit: cover;
+    font-family: Algerian, serif;
+    font-size: 18px;
+    color: rgb(216, 196, 15);
 }
 
 /* TAGLINE */
 .tagline {
-    font-size: 14px;
     margin-top: 5px;
+    color: #ff5703;
+    text-align: center;
 }
 
 /* CONTACT */
 .contact {
-    font-size: 13px;
     margin-top: 10px;
+    color: #ff5100;
+    text-align: center;
 }
 
-/* CONTACT ICON */
-.contact i {
-    margin-right: 5px;
-}
-
-/* SECTION BOX */
+/* SECTION CARDS */
 .box {
-    background: white;
+    background-color: rgb(246, 242, 242);
     margin: 20px auto;
-    padding: 20px;
+    padding: 25px;
     width: 85%;
-    border-radius: 8px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    border-left: 6px solid #20b2aa;
+    border-radius: 10px;
+
+    /* CARD EFFECT */
+    display: block;
+    transition: 0.3s;
+}
+
+/* CARD HOVER */
+.box:hover {
+    transform: translateY(-5px);
 }
 
 /* HEADINGS */
 h2 {
-    border-bottom: 2px solid #2c3e50;
+    font-family: Algerian, serif;
+    font-size: 18px;
+    color: #ff1493;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #20b2aa;
     padding-bottom: 5px;
-    margin-bottom: 10px;
+}
+
+/* TEXT FORMATTING */
+p {
+    margin-bottom: 12px;
+    text-align: justify;
 }
 
 /* LIST */
@@ -132,10 +152,42 @@ li {
 /* PROJECT TITLE */
 .project-title {
     font-weight: bold;
-    margin-top: 10px;
+    color: #20b2aa;
+    margin-top: 12px;
+}
+
+/* SECTION SPACING USING ID SELECTORS */
+#profile, 
+#education, 
+#projects, 
+#skills, 
+#hobbies, 
+#declaration {
+    scroll-margin-top: 20px;
 }
 
 /* SMOOTH SCROLL */
 html {
     scroll-behavior: smooth;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+    .container {
+        display: block;
+    }
+
+    .sidebar {
+        position: relative;
+        width: 100%;
+        height: auto;
+    }
+
+    .main {
+        margin-left: 0;
+    }
+
+    .box {
+        width: 95%;
+    }
 }
