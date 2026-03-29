@@ -1,166 +1,141 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<title>Resume - Mahathi H</title>
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-<style>
-    body {
-        font-family: 'Segoe UI', sans-serif;
-        background-color: #f2f4f7;
-        margin: 0;
-        padding: 20px;
-        color: #333;
-    }
+/* BODY */
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f6f8;
+}
 
-    .container {
-        max-width: 900px;
-        margin: auto;
-        background: white;
-        padding: 30px;
-        border-radius: 8px;
-    }
+/* LAYOUT */
+.container {
+    display: flex;
+}
 
-    /* Header */
-    .header {
-        text-align: center;
-        display: block;
-        margin-bottom: 20px;
-    }
+/* SIDEBAR */
+.sidebar {
+    width: 250px;
+    background: #2c3e50;
+    color: white;
+    height: 100vh;
+    position: fixed;
+    padding: 20px;
+}
 
-    .header h1 {
-        margin: 0;
-        color: #2c3e50;
-    }
+.sidebar h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
 
-    .tagline {
-        font-size: 14px;
-        color: #666;
-        margin: 5px 0;
-    }
+.sidebar ul {
+    list-style: none;
+}
 
-    /* Contact using display */
-    .contact {
-        display: flex;
-        justify-content: center;
-        gap: 15px;
-        flex-wrap: wrap;
-        font-size: 14px;
-        margin-top: 10px;
-    }
+.sidebar ul li {
+    margin: 15px 0;
+}
 
-    .contact span {
-        display: inline-block;
-        background: #e8ecf1;
-        padding: 5px 10px;
-        border-radius: 5px;
-    }
+.sidebar a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+    border-radius: 5px;
+    transition: 0.3s;
+}
 
-    /* Sections */
-    .section {
-        margin-top: 25px;
-    }
+/* HOVER EFFECT */
+.sidebar a:hover {
+    background: #34495e;
+}
 
-    .section h2 {
-        color: #2c3e50;
-        border-bottom: 1px solid #ccc;
-        padding-bottom: 5px;
-    }
+/* ICON SPACING */
+.sidebar i {
+    margin-right: 10px;
+}
 
-    /* Lists */
-    ul {
-        padding-left: 20px;
-    }
+/* MAIN CONTENT */
+.main {
+    margin-left: 250px;
+    width: 100%;
+}
 
-    li {
-        margin-bottom: 8px;
-    }
+/* HEADER */
+header {
+    text-align: center;
+    background: #2c3e50;
+    color: white;
+    padding: 30px;
+}
 
-    /* Highlight titles using span */
-    .highlight {
-        font-weight: bold;
-        color: #1a73e8;
-    }
+header h1 {
+    margin: 0;
+}
 
-</style>
-</head>
+/* PROFILE IMAGE */
+.profile-pic {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-top: 15px;
+    border: 3px solid white;
+    object-fit: cover;
+}
 
-<body>
+/* TAGLINE */
+.tagline {
+    font-size: 14px;
+    margin-top: 5px;
+}
 
-<div class="container">
+/* CONTACT */
+.contact {
+    font-size: 13px;
+    margin-top: 10px;
+}
 
-    <div class="header">
-        <h1>MAHATHI H</h1>
-        <div class="tagline">Aspiring professional blending technology and business with creativity</div>
+/* CONTACT ICON */
+.contact i {
+    margin-right: 5px;
+}
 
-        <div class="contact">
-            <span>Email: mahathi2717@gmail.com</span>
-            <span>LinkedIn: linkedin.com/in/yourprofile</span>
-            <span>Chennai, Tamil Nadu, India</span>
-        </div>
-    </div>
+/* SECTION BOX */
+.box {
+    background: white;
+    margin: 20px auto;
+    padding: 20px;
+    width: 85%;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
 
-    <div class="section">
-        <h2>About Me</h2>
-        <p>
-            I am a motivated student pursuing a dual degree in Electronics and Communication Engineering 
-            and Business Administration. I am interested in learning new technologies and building 
-            practical solutions while improving my technical and business skills.
-        </p>
-    </div>
+/* HEADINGS */
+h2 {
+    border-bottom: 2px solid #2c3e50;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
 
-    <div class="section">
-        <h2>Education</h2>
-        <ul>
-            <li><span class="highlight">B.Tech ECE (1st Year)</span> – SRM Institute of Science and Technology</li>
-            <li><span class="highlight">BBA (Dual Degree)</span> – IIM Bangalore</li>
-            <li>Sri Chaitanya Techno School – Higher Secondary</li>
-            <li>Boaz Public School – Primary Education</li>
-        </ul>
-    </div>
+/* LIST */
+ul {
+    padding-left: 20px;
+}
 
-    <div class="section">
-        <h2>Projects</h2>
-        <ul>
-            <li><span class="highlight">Obstacle Avoiding Car:</span> Built a robotic car using ultrasonic sensors to avoid obstacles.</li>
-            <li><span class="highlight">Fire Alarm Sensor using PCB:</span> Designed a system to detect heat/smoke and trigger an alarm.</li>
-            <li><span class="highlight">Venture @250:</span> Created a business idea within ₹250 focusing on cost efficiency.</li>
-        </ul>
-    </div>
+li {
+    margin-bottom: 8px;
+}
 
-    <div class="section">
-        <h2>Skills</h2>
-        <ul>
-            <li>Problem Solving</li>
-            <li>Basic Electronics</li>
-            <li>Communication</li>
-            <li>Teamwork</li>
-        </ul>
-    </div>
+/* PROJECT TITLE */
+.project-title {
+    font-weight: bold;
+    margin-top: 10px;
+}
 
-    <div class="section">
-        <h2>Hobbies</h2>
-        <ul>
-            <li>Baking</li>
-            <li>Dancing</li>
-        </ul>
-    </div>
-
-    <div class="section">
-        <h2>Strengths</h2>
-        <ul>
-            <li>Quick learner</li>
-            <li>Adaptable</li>
-            <li>Dedicated</li>
-        </ul>
-    </div>
-
-    <div class="section">
-        <h2>Declaration</h2>
-        <p>I hereby declare that the above information is true to the best of my knowledge.</p>
-    </div>
-
-</div>
-
-</body>
-</html>
+/* SMOOTH SCROLL */
+html {
+    scroll-behavior: smooth;
+}
